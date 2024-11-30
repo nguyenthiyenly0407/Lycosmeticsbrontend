@@ -1,0 +1,65 @@
+/* user.css */
+
+/* Style cho container chính */
+.container {
+    margin: 0px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Style cho tiêu đề */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Căn chỉnh các trường trong form thành hàng ngang */
+  form {
+    display: grid; /* Dùng grid để chia thành các cột */
+    grid-template-columns: repeat(5, 1fr); /* 4 cột đều */
+    gap: 15px; /* Khoảng cách giữa các trường */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Đảm bảo form không quá rộng */
+    max-width: 1000px; /* Đặt giới hạn chiều rộng */
+    margin: 0 auto;
+    
+  }
+  
+  /* Mỗi trường input chiếm 18% chiều rộng */
+  form div {
+    flex: 1 1 18%; 
+    min-width: 100px; /* Đảm bảo trường không quá nhỏ */
+  }
+  
+  /* Style cho input */
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style cho button */
+  button {
+    grid-column: span 4; /* Nút chiếm hết 4 cột */
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

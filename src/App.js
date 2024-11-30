@@ -1,46 +1,85 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/login";
 import SignUp from "./components/register";
-
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Dashboard from "./components/dashboard";
 import Profile from "./components/profile";
-import { useState } from "react";
+import Home from './components/home';
+import Users from './components/user';
+import Graph from './components/graph';
+import Navbar from './components/Navbar';
 import { auth } from "./components/firebase";
 
 function App() {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
+
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
     });
-  });
+    return () => unsubscribe(); // Cleanup listener on unmount
+  }, []);
+
   return (
     <Router>
       <div className="App">
-        <div className="auth-wrapper">
-          <div className="auth-inner">
-            <Routes>
-              <Route
-                path="/"
-                element={user ? <Navigate to="/profile" /> : <Login />}
-              />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<SignUp />} />
-              <Route path="/profile" element={<Profile />} />
-            </Routes>
-            <ToastContainer />
-          </div>
-        </div>
+        {/* Routes với Login và Register */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              user ? (
+                <Navigate to="/dashboard" />
+              ) : (
+                <div className="auth-wrapper">
+                  <div className="auth-inner">
+                    <Login />
+                  </div>
+                </div>
+              )
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <div className="auth-wrapper">
+                <div className="auth-inner">
+                  <Login />
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <div className="auth-wrapper">
+                <div className="auth-inner">
+                  <SignUp />
+                </div>
+              </div>
+            }
+          />
+
+          {/* Các Routes với Navbar */}
+          <Route
+            path="*"
+            element={
+              <>
+                <Navbar /> {/* Navbar hiển thị ở tất cả các route sau */}
+                <div className="content">
+                  <Routes>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/user" element={<Users />} />
+                    <Route path="/graph" element={<Graph />} />
+                  </Routes>
+                </div>
+              </>
+            }
+          />
+        </Routes>
       </div>
     </Router>
   );

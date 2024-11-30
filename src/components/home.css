@@ -1,0 +1,132 @@
+/* Đặt container chính ra giữa */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Căn form lên trên */
+    height: 100vh;
+    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+    padding-top: 20px; /* Dịch lên một chút */
+  }
+  
+  /* Tiêu đề form */
+  .dashboard-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Form styling */
+  .deal-form {
+    display: grid; /* Dùng grid để chia thành các cột */
+    grid-template-columns: repeat(4, 1fr); /* 4 cột đều */
+    gap: 15px; /* Khoảng cách giữa các trường */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Đảm bảo form không quá rộng */
+    max-width: 1000px; /* Đặt giới hạn chiều rộng */
+    margin: 0 auto;
+  }
+  
+  /* Styling cho các label */
+  .deal-form label {
+    font-size: 14px;
+    color: #555;
+    display: block; /* Đảm bảo label nằm trên input */
+    margin-bottom: 5px;
+  }
+  
+  /* Styling cho các input */
+  .deal-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Button styling */
+  .deal-form button {
+    grid-column: span 4; /* Nút chiếm hết 4 cột */
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .deal-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Bảng hiển thị các deals */
+  table {
+    width: 60%; /* Đặt chiều rộng của bảng bằng với container */
+    margin: 40px auto; /* Đẩy bảng ra giữa */
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  td {
+    background-color: #fafafa;
+    color: #555;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+  }
+  
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Chỉnh container của phần import */
+  .import-container {
+    display: flex; /* Sắp xếp ngang */
+    justify-content: space-between; /* Dàn đều giữa input và button */
+    align-items: center; /* Căn giữa theo trục dọc */
+    width: 100%; /* Đảm bảo chiếm hết chiều rộng container cha */
+    gap: 20px; /* Khoảng cách giữa input và button */
+  }
+  
+  .file-input {
+    flex: none; /* Không bị ảnh hưởng bởi flex của container */
+    width: 200px; /* Tăng chiều rộng để nó dài ra */
+    padding: 10px; /* Thêm padding để input trông thoải mái hơn */
+    font-size: 16px; /* Tăng kích thước chữ */
+    border: 1px solid #ddd; /* Viền để dễ nhìn */
+    border-radius: 4px; /* Làm bo góc */
+  }
+  
+  .import-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .import-button:hover {
+    background-color: #45a049;
+  }
