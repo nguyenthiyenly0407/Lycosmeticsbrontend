@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./home.css"; // Thêm CSS nếu cần
 
+import { DealsContext } from "./DealsContext";
 const Dashboard = () => {
   const [deal, setDeal] = useState({
     amount: "",

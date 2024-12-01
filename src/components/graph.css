@@ -1,0 +1,116 @@
+/* Container chính của phần báo cáo */
+.graph-report-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: var(--table-border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề báo cáo */
+.graph-report-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Phần nhập ngày từ ngày nào đến ngày nào và button trên cùng một hàng ngang */
+.graph-report-date-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.graph-report-date-input-container label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.graph-report-date-input-container input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 100px; /* Thu nhỏ chiều rộng của các trường input */
+}
+
+.graph-report-date-input-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 180px;
+}
+
+.graph-report-date-input-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Phần chọn biểu đồ */
+.graph-report-chart-select-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.graph-report-chart-select-container select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 180px; /* Thu nhỏ chiều rộng của dropdown select */
+}
+
+/* Phần hiển thị biểu đồ */
+.graph-report-chart-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.graph-report-chart-container > div {
+    width: 30%;
+    text-align: center;
+}
+
+.graph-report-chart-container h3 {
+    color: #333;
+}
+
+/* Phần bảng hiển thị dữ liệu */
+.graph-report-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.graph-report-table th, .graph-report-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.graph-report-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.graph-report-table td {
+    background-color: #fafafa;
+    color: #555;
+}
+
+.graph-report-table tr:hover {
+    background-color: #f1f1f1;
+}

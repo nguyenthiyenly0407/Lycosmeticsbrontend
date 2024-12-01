@@ -19,7 +19,6 @@ function Login() {
       });
     } catch (error) {
       console.log(error.message);
-
       toast.error(error.message, {
         position: "bottom-center",
       });
@@ -27,40 +26,40 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>Login</h3>
+    <form onSubmit={handleSubmit} style={{ backgroundColor: "white", padding: "20px", borderRadius: "8px", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", width: "100%", maxWidth: "400px", display: "flex", flexDirection: "column", gap: "15px", margin: "0 auto", height: "auto" }}>
+      <h3 style={{ textAlign: "center", marginBottom: "20px" }}>Login</h3>
 
-      <div className="mb-3">
+      <div className="mb-3" style={{ display: "flex", flexDirection: "column" }}>
         <label>Email address</label>
         <input
           type="email"
-          className="form-control"
           placeholder="Enter email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          style={{ padding: "10px", border: "1px solid #ccc", borderRadius: "5px", width: "100%" }}
         />
       </div>
 
-      <div className="mb-3">
+      <div className="mb-3" style={{ display: "flex", flexDirection: "column" }}>
         <label>Password</label>
         <input
           type="password"
-          className="form-control"
           placeholder="Enter password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          style={{ padding: "10px", border: "1px solid #ccc", borderRadius: "5px", width: "100%" }}
         />
       </div>
 
-      <div className="d-grid">
-        <button type="submit" className="btn btn-primary">
+      <div className="d-grid" style={{ marginTop: "15px" }}>
+        <button type="submit" style={{ padding: "10px", backgroundColor: "#007bff", color: "white", border: "none", borderRadius: "5px", cursor: "pointer", width: "100%" }}>
           Submit
         </button>
       </div>
-      <p className="forgot-password text-right">
-        New user <a href="/register">Register Here</a>
-      </p>
-      <SignInwithGoogle/>
+
+
+
+      <SignInwithGoogle />
     </form>
   );
 }
