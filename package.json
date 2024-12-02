@@ -45,5 +45,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://api.hubapi.com"
+  "proxy": "https://api.hubapi.com",
+  "devDependencies": {
+  "react-scripts": "^4.0.3"
+}
 }
