@@ -7,7 +7,7 @@
     position: fixed; /* Stick to the left */
     top: 0;
     left: 0;
-    padding-top: 80px; /* Offset for content if needed */
+    padding-top: 40px; /* Offset for content if needed */
   }
   
   .nav-menu-items {
@@ -39,4 +39,9 @@
   
   .nav-text a:hover {
     background-color: #1a83ff;
+  }
+  .nav-text .title {
+    font-size: 1.7rem; /* Điều chỉnh kích thước title tại đây */
+    font-weight: bold; /* Thêm đậm cho title */
+    
   }

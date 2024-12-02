@@ -3,6 +3,12 @@ import React from 'react';
 
 export const SidebarData = [
   {
+    title: 'LyMsCosmetics',
+    path: '/dashboard',
+    cName: 'nav-text',
+    titleClass: 'title' 
+  },
+  {
     title: 'Home',
     path: '/dashboard',
     
@@ -19,12 +25,12 @@ export const SidebarData = [
     path: '/graph',
     cName: 'nav-text'
   },
-  // {
-  //   title: 'FORM',
-  //   //path: '/team',
-  //   icon: <IoIcons.IoMdPeople />,
-  //   cName: 'nav-text'
-  // },
+  {
+    title: 'CRMFORM',
+    path: '/form',
+    
+    cName: 'nav-text'
+  },
   {
     title: 'SETTING',
     path: '/profile',   

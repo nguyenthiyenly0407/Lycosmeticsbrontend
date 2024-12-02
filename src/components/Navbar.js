@@ -17,7 +17,7 @@ function Navbar() {
             <li key={index} className={isActive ? 'nav-text active' : 'nav-text'}>
               <Link to={item.path}>
                 {item.icon}
-                <span>{item.title}</span>
+                <span className={item.titleClass}>{item.title}</span>
               </Link>
             </li>
           );

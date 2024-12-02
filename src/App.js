@@ -11,7 +11,7 @@ import Users from './components/user';
 import Graph from './components/graph';
 import Navbar from './components/Navbar';
 import { auth } from "./components/firebase";
-
+import CRMform from './components/crmform'
 function App() {
   const [user, setUser] = useState(null);
 
@@ -74,6 +74,7 @@ function App() {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/user" element={<Users />} />
                     <Route path="/graph" element={<Graph />} />
+                    <Route path="/form" element={<CRMform />} />
                   </Routes>
                 </div>
               </>
